@@ -1,0 +1,234 @@
+<!doctype html>
+
+ <html class="no-js" lang="en" itemscope itemtype="http://schema.org/Product"> 
+<head>
+  <meta charset="utf-8">
+
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Gumby - A Flexible, Responsive CSS Framework - Powered by SASS</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="author" content="humans.txt">
+
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+
+  <meta property="fb:page_id" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:description" content=""/>
+  <meta property="og:title" content=""/>
+
+  <meta itemprop="name" content="">
+  <meta itemprop="description" content="">
+  <meta itemprop="image" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+ 
+  <link rel="stylesheet" href="css/gumby.css">
+  
+  <script src="js/libs/modernizr-2.6.2.min.js"></script>
+</head>
+
+<style>
+  html, body 
+  {
+    background-image: url(back.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .container
+  {
+    width: 500px;
+    height: 500px;
+    background-color: #4682B4;
+    margin-left: 400px;
+  }
+  
+  .row {
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  .four.columns.logo
+  {
+    font-size: 50px !important;
+  }
+
+  h1, h2 {
+    font: bold italic 220px georgia, times new roman, serif;
+    color: black;
+    letter-spacing: -.09em;
+    -webkit-transition-duration: 1s;
+  }
+
+  h2  {
+    font-size: 21px;
+    font-weight: normal;
+    line-height: 1.6;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 60px;
+    margin-bottom: 0;
+    color: black;
+
+    -webkit-transition-duration: .2s;
+    -moz-transition-duration: .2s;
+    -o-transition-duration: .2s;
+    -ms-transition-duration: .2s;
+    transition-duration: .2s;
+  }
+
+  .column:hover p, .columns:hover p {
+    font-size: 25px;
+    font-weight: bold;
+
+    -webkit-transition-duration: .2s;
+    -moz-transition-duration: .2s;
+    -o-transition-duration: .2s;
+    -ms-transition-duration: .2s;
+    transition-duration: .2s;
+  }
+
+  .head, .head:hover {
+    box-shadow: none;
+    margin-top: 30px;
+  }
+
+  .head span {
+    font-weight: bold;
+    color: #353535;
+  }
+
+  .head span span {
+    font-size: 32px;
+    font-weight: bold !important;
+  }
+
+  a {
+    color: #d04526;
+  }
+
+  a:hover {
+    text-decoration:bold;
+    background: transparent;
+  }
+
+  .special, .special:hover {
+    background: transparent;
+    border: none;
+  }
+
+  .special:hover p {
+    color: #ffe400;
+  }
+
+  @media only screen and (max-width: 767px) {
+
+    h1 {
+      font: bold italic 100px georgia, times new roman, serif;
+      -webkit-transition-duration: .5s;
+    }
+
+  }
+
+
+</style>
+
+<body>
+
+  <div id="demo_navbar">
+  <div id="main_nav" class="pretty navbar row">
+     <a href="#" gumby-trigger="#main_nav > ul" class="toggle">
+        <i class="icon-menu"></i></a>
+     <h1 class="four columns logo"><a href="#">my site</a></h1>
+     <ul class="eight columns">
+        <li><a href="portfolio.html">Portfolio</a>
+           <div class="dropdown">
+              <ul>
+                 <li><a href="#">HTML</a>
+                  <div class="dropdown">
+                       <ul>
+                          <li><a href="Structure.html">Structure.html</a></li>
+                          <li><a href="common_elements.html">Common_elements.html</a></li>
+                          <li><a href="cv.html">Curriculum Vitae(CV)</a></li>
+                          <li><a href="graphics.html">Graphics</a></li>
+                          <li><a href="temporal.html">Temporal</a></li>
+                          <li><a href="form.html">Form</a></li>
+                          <li><a href="tables.html">Tables</a></li>
+                          <li><a href="temporal.html">Video</a></li>
+                       </ul>
+                    </div>
+                   </li>
+                 <li><a href="#">CSS</a>
+                    <div class="dropdown">
+                       <ul>
+                          <li><a href="selectors.html">Selectors.html</a></li>
+                          <li><a href="selectors.css">Selectors.css</a></li>
+                          <li><a href="common_css.html">Common_css.html</a></li>
+                          <li><a href="common_css.css">Common_css.css</a></li>
+                       </ul>
+                    </div>
+                 </li>
+              </ul>
+           </div>
+       </li>
+       <li><a href="Website/index.html">Website project</a></li>
+    </ul>
+  </div>
+</div>
+  
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns special head">
+        <img src="images/image.jpg" style="width: 200px; height: 200px;">
+        <p><h3>Nikita Shrestha</h3> <br>
+        Bsc Hons Computing Level 3 <br>
+          Student Id:- c7189992 <br>
+        </p>
+        <h2>A <span>gumby</span>site</h2>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+  var oldieCheck = Boolean(document.getElementsByTagName('html')[0].className.match(/\soldie\s/g));
+  if(!oldieCheck) {
+    document.write('<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"><\/script>');
+  } else {
+    document.write('<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"><\/script>');
+  }
+  </script>
+  <script>
+  if(!window.jQuery) {
+    if(!oldieCheck) {
+      document.write('<script src="js/libs/jquery-2.0.2.min.js"><\/script>');
+    } else {
+      document.write('<script src="js/libs/jquery-1.10.1.min.js"><\/script>');
+    }
+  }
+  </script>
+
+  
+  <script gumby-touch="js/libs" src="js/libs/gumby.js"></script>
+  <script src="js/libs/ui/gumby.retina.js"></script>
+  <script src="js/libs/ui/gumby.fixed.js"></script>
+  <script src="js/libs/ui/gumby.skiplink.js"></script>
+  <script src="js/libs/ui/gumby.toggleswitch.js"></script>
+  <script src="js/libs/ui/gumby.checkbox.js"></script>
+  <script src="js/libs/ui/gumby.radiobtn.js"></script>
+  <script src="js/libs/ui/gumby.tabs.js"></script>
+  <script src="js/libs/ui/gumby.navbar.js"></script>
+  <script src="js/libs/ui/jquery.validation.js"></script>
+  <script src="js/libs/gumby.init.js"></script>
+
+
+
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+
+  </body>
+</html>

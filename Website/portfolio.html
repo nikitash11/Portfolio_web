@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<title>Portfolio</title>
+	<link href="css/foundation.css" rel="stylesheet" type="text/css" />
+	<link href="foundation-icons/foundation-icons.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="css/app.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+	* 
+	{
+    	box-sizing: border-box;
+	}
+
+	body {
+	    background-color: #f1f1f1;
+	    font-family: Arial;
+	}
+
+	/* Center website */
+	.main {
+	    max-width: 1200px;
+	    margin: auto;
+	}
+
+	.logo
+	{
+		width: 50px;
+		height: 30px;
+		margin-right: 5px;
+	}
+
+	h2 
+	{
+	    font-size: 50px;
+	    word-break: break-all;
+	    text-align: center;
+	    font-family: 'Abril Fatface', cursive;
+	}
+
+	h3
+	{
+		font-family: 'Abril Fatface', cursive;
+		text-align: center;
+	}
+
+	p
+	{
+		font-family: 'Arimo', sans-serif;
+		text-align: center;
+	}
+
+	.row {
+	    margin: 8px -16px;
+	}
+
+	/* Add padding BETWEEN each column */
+	.row,
+	.row > .column {
+	    padding: 8px;
+	}
+
+	/* Create four equal columns that floats next to each other */
+	.column {
+	    float: left;
+	    width: 25%;
+	}
+
+	/* Clear floats after rows */ 
+	.row:after {
+	    content: "";
+	    display: table;
+	    clear: both;
+	}
+
+	/* Content */
+	.content {
+	    background-color: white;
+	    padding: 10px;
+	}
+
+	/* Responsive layout - makes a two column-layout instead of four columns */
+	@media screen and (max-width: 900px) {
+	    .column {
+	        width: 50%;
+	    }
+	}
+
+	/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+	@media screen and (max-width: 600px) {
+	    .column {
+	        width: 100%;
+	    }
+	}
+
+	/* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
+	.icon-bar 
+	{
+	  	position: fixed;
+	  	top: 50%;
+	  	-webkit-transform: translateY(-50%);
+	  	-ms-transform: translateY(-50%);
+	  	transform: translateY(-50%);
+	}
+
+	/* Style the icon bar links */
+	.icon-bar a 
+	{
+		display: block;
+		text-align: center;
+		padding: 16px;
+		transition: all 0.3s ease;
+		color: white;
+		font-size: 20px;
+	}
+
+	/* Style the social media icons with color, if you want */
+	.icon-bar a:hover 
+	{
+	  	background-color: #000;
+	}
+
+	.facebook 
+	{
+	 	background: #3B5998;
+	  	color: white;
+	}
+
+	.twitter 
+	{
+	  	background: #55ACEE;
+	  	color: white;
+	}
+
+	.google 
+	{
+	    background: #dd4b39;
+	  	color: white;
+	}
+
+	.linkedin 
+	{
+	    background: #007bb5;
+		color: white;
+	}
+
+	.youtube 
+	{
+		background: #bb0000;
+	  	color: white;
+	}
+
+
+	footer
+	{
+		width: 100%;
+		height: 50%;
+		background-color: #D3D3D3;
+		margin-top: 10px;
+		font-family: 'Gothic A1', sans-serif;
+	}
+
+	footer h5
+	{
+		text-align: center;
+	}
+	footer p
+	{
+		text-align: center;
+	}
+	</style>
+</head>
+<body>
+	<!-- Sticky Menu -->
+	<div data-sticky-container>
+	  <div class="top-bar" data-sticky data-margin-top="0" id="example-menu">
+	    <div class="top-bar-left">
+	      <ul class="menu">
+	        <li class="menu-text"><img src="image/logo.png" class="logo">NS</li>
+	      </ul>
+	    </div>
+	    <div class="top-bar-right"> <!-- right assigned menu -->
+	      		<ul class="menu menu dropdown menu" data-dropdown-menu data-magellan>
+			      	<!-- linking menu and adding icons -->
+			        <li>
+			        	<a href="index.html">
+			        		<i class="fi-home size-24"></i>
+			        		<span> Home</span>
+			        	</a>
+			        </li> 
+
+			        <li>
+			        	<a href="portfolio.html">
+			        		<i class="fi-photo size-24"></i>
+			        		<span> Portfolio</span>
+			        	</a>
+			        	<ul class="menu">
+			        		<li>
+			        			<a href="food.html">Food</a>
+			        		</li>
+			        		<li>
+			        			<a href="nature.html">Nature</a>
+			        		</li>
+			        		<li>
+			        			<a href="people.html">People</a>
+			        		</li>
+						</ul>
+					</li>
+
+			        <li>
+			        	<a href="client.html">
+			        		<i class="fi-heart size-24"></i>
+			        		<span> Client</span>
+			        	</a>
+			        </li>
+
+			        <li>
+			        	<a href="about.html">
+			        		<i class="fi-info size-24"></i>
+			        		<span> About</span>
+			        	</a>
+			        </li>
+
+			        <li>
+			        	<a href="contact.html">
+			        		<i class="fi-telephone size-24"></i>
+			        		<span> Contact</span>
+			        	</a>
+			        </li>
+			    </ul>
+	    	</div>
+	  </div>
+	</div>
+
+	<!-- MAIN (Center website) -->
+	<div class="main">
+		<h2 class="">PORTFOLIO</h2>
+		<!-- Portfolio Gallery Grid -->
+		<div class="row">
+			<div class="column">
+				<div class="content">
+					<a href="food.html">
+						<img src="image/food/food1.jpg" alt="Food" style="width:100%">
+					</a>
+					<h3>Food Photography</h3>
+					<p>"I love photography, I love food, I love travelling and to put those three things together would just be the ultimate dream."</p>
+    			</div>
+  			</div>
+  			<div class="column">
+  				<div class="content">
+  					<a href="nature.html">
+  						<img src="image/nature/nature1.jpg" alt="Nature" style="width:100%">
+  					</a>
+  					<h3>Call of beauty</h3>
+  					<p>"Photography to me is catching a moment which is passing and which is true. There is something so marvelous in all things nature offer."</p>
+    			</div>
+  			</div>
+  			<div class="column">
+  				<div class="content">
+  					<a href="people.html">
+  						<img src="image/people/people1.jpg" alt="People" style="width:100%">
+  					</a>
+  					<h3>People</h3>
+  					<p>"You can look at a picture for a week and never think of it again. You can also look at a picture for a second and think of it all your life."</p>
+    			</div>
+  			</div>
+  			<div class="column">
+    			<div class="content">
+    				<a href="client.html">
+    					<img src="image/fas/4.jpg" alt="Fashion" style="width:92%">
+    				</a>
+      				<h3>Fall Fashion</h3>
+      				<p>"I like to photograph anyone before they know what their best angles are."</p>
+    			</div>
+  			</div>
+		<!-- END GRID -->
+		</div>
+
+		<div class="content">
+			<a href="client.html">
+  			<img src="image/wed/3.jpg" alt="Bear" style="width:100%">
+  			</a>
+  			<h3>Wedding</h3>
+  			<p>Photography is a way of feeling, touching and loving, what you have caught on flim is captured forever. It remembers little things, long after you have forgotten everything.</p>
+		</div>
+	<!-- END MAIN -->
+	</div>
+
+	
+
+	<!-- The social media icon bar -->
+	<div class="icon-bar">
+		<a href="https://www.facebook.com/" class="facebook" target="_blank">
+			<i class="fa fa-facebook"></i>
+		</a> 
+		<a href="https://twitter.com/login?lang=en" class="twitter" target="_blank">
+			<i class="fa fa-twitter"></i>
+		</a> 
+		<a href="https://www.google.com.np/" class="google" target="_blank">
+			<i class="fa fa-google"></i>
+		</a> 
+		<a href="https://np.linkedin.com/" class="linkedin" target="_blank">
+			<i class="fa fa-linkedin"></i>
+		</a>
+		<a href="https://www.youtube.com/" class="youtube" target="_blank">
+			<i class="fa fa-youtube"></i>
+		</a> 
+	</div>
+
+	<footer>
+		<h5>NS Photography</h5>
+		<p>Nepal Multi Photographer <br>
+			2511 | nikitashrestha@NS.com <br>
+			Kathmandu, Nepal <br>
+		&copy;nikitashrestha-photography</p>
+	</footer>
+
+	<script src="js/vendor/jquery.js"></script>
+	<script src="js/vendor/what-input.js"></script>
+	<script src="js/vendor/foundation.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>

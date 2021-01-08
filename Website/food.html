@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>Food</title>
+	<link rel="stylesheet" type="text/css" href="css/foundation.css">
+	<link href="foundation-icons/foundation-icons.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="css/app.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+	h1
+	{
+		font-family: 'Abril Fatface', cursive;
+	}
+
+	h4
+	{
+		text-align: center;
+	}
+
+	p
+	{
+		font-family: 'Ubuntu', sans-serif;
+		text-align: center;
+	}
+
+	.logo
+	{
+		width: 50px;
+		height: 30px;
+		margin-right: 5px;
+	}
+
+	.zoom 
+	{
+	    padding: 50px;
+	    transition: transform .2s; /* Animation */
+	    margin: 0 auto;	
+	}
+
+	.zoom:hover 
+	{
+    	transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+	}
+
+	.text-block 
+	{
+	    background-color: #4682B4;
+	    color: white;
+	    bottom: 20px;
+    	right: 20px;
+    	padding-left: 5px;
+	}
+
+	/* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
+	.icon-bar 
+	{
+		position: fixed;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+
+	/* Style the icon bar links */
+	.icon-bar a 
+	{
+		display: block;
+		text-align: center;
+		padding: 16px;
+		transition: all 0.3s ease;
+		color: white;
+		font-size: 20px;
+	}
+
+	/* Style the social media icons with color, if you want */
+	.icon-bar a:hover 
+	{
+	  	background-color: #000;
+	}
+
+	.facebook 
+	{
+	  	background: #3B5998;
+	  	color: white;
+	}
+
+	.twitter 
+	{
+	  	background: #55ACEE;
+	  	color: white;
+	}
+
+	.google 
+	{
+	    background: #dd4b39;
+	  	color: white;
+	}
+
+	.linkedin 
+	{
+	    background: #007bb5;
+		color: white;
+	}
+
+	.youtube 
+	{
+		background: #bb0000;
+	  	color: white;
+	}
+
+	p
+	{
+		font-family: 'Oxygen', sans-serif;
+		
+	}
+
+	footer
+	{
+		width: 100%;
+		height: 50%;
+		background-color: #D3D3D3;
+		font-family: 'Gothic A1', sans-serif;
+	}
+
+	footer h5
+	{
+		text-align: center;
+	}
+	footer p
+	{
+		text-align: center;
+	}
+
+
+	#myImg 
+	{
+	    border-radius: 5px;
+	    cursor: pointer;
+	    transition: 0.3s;
+	}
+
+	#myImg:hover 
+	{
+		opacity: 0.7;
+	}
+
+	/* The Modal (background) */
+	.modal 
+	{
+	    display: none; /* Hidden by default */
+	    position: fixed; /* Stay in place */
+	    z-index: 1; /* Sit on top */
+	    padding-top: 100px; /* Location of the box */
+	    left: 0;
+	    top: 0;
+	    width: 100%; /* Full width */
+	    height: 100%; /* Full height */
+	    overflow: auto; /* Enable scroll if needed */
+	    background-color: rgb(0,0,0); /* Fallback color */
+	    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+	}
+
+	/* Modal Content (image) */
+	.modal-content 
+	{
+	    margin: auto;
+	    display: block;
+	    width: 80%;
+	    max-width: 700px;
+	}
+
+	/* Caption of Modal Image */
+	#caption 
+	{
+	    margin: auto;
+	    display: block;
+	    width: 80%;
+	    max-width: 700px;
+	    text-align: center;
+	    color: #ccc;
+	    padding: 10px 0;
+	    height: 150px;
+	}
+
+	/* Add Animation */
+	.modal-content, #caption 
+	{    
+	    -webkit-animation-name: zoom;
+	    -webkit-animation-duration: 0.6s;
+	    animation-name: zoom;
+	    animation-duration: 0.6s;
+	}
+
+	@-webkit-keyframes zoom 
+	{
+	    from {-webkit-transform:scale(0)} 
+	    to {-webkit-transform:scale(1)}
+	}
+
+	@keyframes zoom 
+	{
+	    from {transform:scale(0)} 
+	    to {transform:scale(1)}
+	}
+
+	/* The Close Button */
+	.closed 
+	{
+	    position: absolute;
+	    top: 15px;
+	    right: 35px;
+	    color: #f1f1f1;
+	    font-size: 40px;
+	    font-weight: bold;
+	    transition: 0.3s;
+	}
+
+	.closed:hover,
+	.closed:focus 
+	{
+	    color: #bbb;
+	    text-decoration: none;
+	    cursor: pointer;
+	}
+
+	/* 100% Image Width on Smaller Screens */
+	@media only screen and (max-width: 700px)
+	{
+	    .modal-content 
+	    {
+	        width: 100%;
+	    }
+	}
+	</style>
+</head>
+<body>
+	<!-- Sticky Menu -->
+	<div data-sticky-container>
+	  <div class="top-bar" data-sticky data-margin-top="0" id="example-menu">
+	    <div class="top-bar-left">
+	      <ul class="menu">
+	        <li class="menu-text"><img src="image/logo.png" class="logo">NS</li>
+	      </ul>
+	    </div>
+	    <div class="top-bar-right"> <!-- right assigned menu -->
+	      		<ul class="menu menu dropdown menu" data-dropdown-menu data-magellan>
+			      	<!-- linking menu and adding icons -->
+			        <li>
+			        	<a href="index.html">
+			        		<i class="fi-home size-24"></i>
+			        		<span> Home</span>
+			        	</a>
+			        </li> 
+
+			        <li>
+			        	<a href="portfolio.html">
+			        		<i class="fi-photo size-24"></i>
+			        		<span> Portfolio</span>
+			        	</a>
+			        	<ul class="menu">
+			        		<li>
+			        			<a href="food.html">Food</a>
+			        		</li>
+			        		<li>
+			        			<a href="nature.html">Nature</a>
+			        		</li>
+			        		<li>
+			        			<a href="people.html">People</a>
+			        		</li>
+						</ul>
+					</li>
+
+			        <li>
+			        	<a href="client.html">
+			        		<i class="fi-heart size-24"></i>
+			        		<span> Client</span>
+			        	</a>
+			        </li>
+
+			        <li>
+			        	<a href="about.html">
+			        		<i class="fi-info size-24"></i>
+			        		<span> About</span>
+			        	</a>
+			        </li>
+
+			        <li>
+			        	<a href="contact.html">
+			        		<i class="fi-telephone size-24"></i>
+			        		<span> Contact</span>
+			        	</a>
+			        </li>
+			    </ul>
+	    	</div>
+	  </div>
+	</div>
+
+	<!-- Title -->
+	<div class="grid-container">
+		<div class="grid-x">
+	  		<div class="cell">
+	  			<h1 class="text-center">PORTFOLIO:- FOOD</h1>
+	  		</div>
+	  	</div>
+
+	  	<!--grid 4 image in a row -->
+		<div class="grid-x grid-margin-x grid-margin-y" style="margin-left: 1px;">
+		  	<div class="cell small-10 medium-6 large-3">
+		  		<a href="image/food/food2.jpg">
+			  		<img src="image/food/food2.jpg" alt="food">
+			  		<div class="text-block">
+			  			<h4>Breakfast</h4>
+						<p>Healthy eating, healthy living.</p>
+					</div>
+			  	</a>	
+	 		</div>
+		  	<div class="cell small-10 medium-6 large-3">
+		  		<a href="image/food/food3.jpg">
+		  			<img src="image/food/food3.jpg" alt="food">
+		  			<div class="text-block">
+			  			<h4>Salad</h4>
+						<p>Salad that is not just greens.</p>
+					</div>
+		  		</a>		
+		  	</div>
+		  	<div class="cell small-10 medium-6 large-3">
+		  		<a href="image/food/food4.jpg">
+		  			<img src="image/food/food4.jpg" alt="food">
+		  			<div class="text-block">
+			  			<h4>BBQ Steak</h4>
+						<p>Mouth watering savory flavor.</p>
+					</div>
+		  		</a>	
+		  	</div>
+		  	<div class="cell small-10 medium-6 large-3">
+		  		<a href="image/food/food5.jpg">
+		  			<img src="image/food/food5.jpg" alt="food">
+		  			<div class="text-block">
+			  			<h4>Tomato Dish</h4>
+						<p>For the tomato lovers.</p>
+					</div>
+		  		</a>
+		  	</div> 
+		</div>
+		
+		<div class="grid-x grid-margin-x grid-margin-y" style="margin-left: 1px;">
+			<div class="cell small-10 medium-6 large-3">
+		  		<a href="image/food/food6.jpg">
+		  			<img src="image/food/food6.jpg" alt="food">
+		  			<div class="text-block">
+			  			<h4>Chicken Grilled Roti</h4>
+						<p>Fulfilling tummy.</p>
+					</div>
+		  		</a>
+		  	</div>
+		  	<div class="cell small-10 medium-6 large-3" >
+		  		<a href="image/food/food7.jpg">
+		  			<img src="image/food/food7.jpg" alt="food">
+		  			<div class="text-block">
+			  			<h4>Nachos with Salsa</h4>
+						<p>Eat nachos and chill. </p>
+					</div>
+		  		</a>
+		  	</div>
+		  	<div class="cell small-10 medium-6 large-3">
+		  		<a href="image/food/food8.jpg">
+		  			<img src="image/food/food8.jpg" alt="food">
+		  			<div class="text-block">
+			  			<h4>Spices</h4>
+						<p>Master of the ingredient.</p>
+					</div>
+		  		</a>	
+		  	</div>
+		  	<div class="cell small-10 medium-6 large-3">
+		  		<a href="image/food/food9.jpg">
+		  			<img src="image/food/food9.jpg" alt="food">
+		  			<div class="text-block">
+			  			<h4>Guava</h4>
+						<p>A healthy outside starts from the inside.</p>
+					</div>
+		  		</a>
+		  	</div>
+		</div>
+
+		<div class="grid-x grid-margin-x grid-margin-y" style="margin-left: 1px;">
+			<div class="cell small-10 medium-6 large-3">
+		  		<a href="image/food/food10.jpg">
+		  			<img src="image/food/food10.jpg" alt="food">
+		  			<div class="text-block">
+			  			<h4>Grilled Pork</h4>
+						<p>One piece is not enough.</p>
+					</div>
+		  		</a>	
+		  	</div>
+		  	<div class="cell small-10 medium-6 large-3">
+		  		<a href="image/food/food11.jpg">
+		  			<img src="image/food/food11.jpg" alt="food">
+		  			<div class="text-block">
+			  			<h4>Fruit Dessert</h4>
+						<p>For the love of fruit and dessert.</p>
+					</div>
+		  		</a>	
+		  	</div>
+		  	<div class="cell small-10 medium-6 large-3">
+		  		<a href="image/food/food12.jpg">
+		  			<img src="image/food/food12.jpg" alt="food">
+		  			<div class="text-block">
+			  			<h4>Grilled Beef</h4>
+						<p>Juicy beef is what one craves for.</p>
+					</div>
+		  		</a>	   	
+		  	</div>
+		  	<div class="cell small-10 medium-6 large-3">
+		  		<a href="image/food/food13.jpg" >
+		  			<img src="image/food/food13.jpg" alt="food">
+		  			<div class="text-block">
+			  			<h4>Spicy Carrot salad</h4>
+						<p>Food that makes you happy.</p>
+					</div>
+		  		</a>		
+			</div>
+		</div>
+	</div>
+
+	<div class="grid-container">
+		<p style="border: double; margin-left: 15px; font-size: 18px;">For anyone whose minds and hearts are mostly dominated by your stomachs, a delicious and satisfying dish could lighten up even the darkest of days in just a flick. The obsession in the food is observed to be much more evident in today’s times having all of the recipe books, tv cooking shows as well as the cooking sites. And how could you forget about all those big figures which basically inspire how we prepare food, eat and even think? That’s right, the chefs! Chefs are the people driving the craze of food and unquestionably they dominate the culinary world. <br><br>
+
+		Foods from all over the world are happiness, and produced by the craftiest hand of the greatest chefs from all over the globe, they’re simply ecstasy. But of course, we need to give the credit to all the culinary chefs who prepare the dishes that offer culinary orgasms to people all over the world. Never ever forget to thank the chef. Listed here are the ten best chefs from around the globe who satisfy your tummies with foods and rarely get appreciated for this. They’re the most influential as well as the best chefs of all time that have dominated and still dominates the culinary world, providing a terrific sense of taste for all. Take a look.</p>
+	</div>
+
+	<!-- The social media icon bar -->
+	<div class="icon-bar">
+		<a href="https://www.facebook.com/" class="facebook" target="_blank">
+			<i class="fa fa-facebook"></i>
+		</a> 
+		<a href="https://twitter.com/login?lang=en" class="twitter" target="_blank">
+			<i class="fa fa-twitter"></i>
+		</a> 
+		<a href="https://www.google.com.np/" class="google" target="_blank">
+			<i class="fa fa-google"></i>
+		</a> 
+		<a href="https://np.linkedin.com/" class="linkedin" target="_blank">
+			<i class="fa fa-linkedin"></i>
+		</a>
+		<a href="https://www.youtube.com/" class="youtube" target="_blank">
+			<i class="fa fa-youtube"></i>
+		</a> 
+	</div>
+
+	<div class="callout secondary small" style="margin-top: 30px; margin-bottom: 30px;">
+	  	<p class="text-center" style="font-size: 20px;">~~~ On to 
+	  		<a href="nature.html">Nature Highlights</a> ~~~
+	  	</p>
+	</div>
+
+	<footer>
+		<h5>NS Photography</h5>
+		<p>Nepal Multi Photographer <br>
+			2511 | nikitashrestha@NS.com <br>
+			Kathmandu, Nepal <br>
+		&copy;nikitashrestha-photography </p>
+	</footer>
+
+	<script src="js/vendor/jquery.js"></script>
+	<script src="js/vendor/what-input.js"></script>
+	<script src="js/vendor/foundation.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>

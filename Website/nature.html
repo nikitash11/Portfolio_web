@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>Nature</title>
+	<link rel="stylesheet" type="text/css" href="css/foundation.css">
+	<link href="foundation-icons/foundation-icons.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="css/app.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+	.sticky-container
+	{
+		z-index: 100000;
+	}
+
+	h1
+	{
+		font-family: 'Abril Fatface', cursive;
+	}
+
+	p
+	{
+		font-size: 20px;
+	}
+
+	.logo
+	{
+		width: 50px;
+		height: 30px;
+		margin-right: 5px;
+	}
+
+	/* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
+		.icon-bar 
+		{
+		  	position: fixed;
+		  	top: 50%;
+		  	-webkit-transform: translateY(-50%);
+		  	-ms-transform: translateY(-50%);
+		  	transform: translateY(-50%);
+		}
+
+		/* Style the icon bar links */
+		.icon-bar a 
+		{
+			display: block;
+			text-align: center;
+			padding: 16px;
+			transition: all 0.3s ease;
+			color: white;
+			font-size: 20px;
+		}
+
+		/* Style the social media icons with color, if you want */
+		.icon-bar a:hover 
+		{
+		  	background-color: #000;
+		}
+
+		.facebook 
+		{
+		  	background: #3B5998;
+		  	color: white;
+		}
+
+		.twitter 
+		{
+		  	background: #55ACEE;
+		  	color: white;
+		}
+
+		.google 
+		{
+		    background: #dd4b39;
+		  	color: white;
+		}
+
+		.linkedin 
+		{
+		    background: #007bb5;
+			color: white;
+		}
+
+		.youtube 
+		{
+			background: #bb0000;
+		  	color: white;
+		}
+
+		footer
+	{
+		width: 100%;
+		height: 50%;
+		background-color: #D3D3D3;
+		font-family: 'Gothic A1', sans-serif;
+	}
+
+	footer h5
+	{
+		text-align: center;
+	}
+	footer p
+	{
+		text-align: center;
+	}
+	</style>
+</head>
+<body>
+	<!-- Sticky Menu -->
+	<div data-sticky-container>
+	  <div class="top-bar" data-sticky data-margin-top="0" id="example-menu">
+	    <div class="top-bar-left">
+	      <ul class="menu">
+	        <li class="menu-text"><img src="image/logo.png" class="logo">NS</li>
+	      </ul>
+	    </div>
+	    <div class="top-bar-right"> <!-- right assigned menu -->
+	      		<ul class="menu menu dropdown menu" data-dropdown-menu data-magellan>
+			      	<!-- linking menu and adding icons -->
+			        <li>
+			        	<a href="index.html">
+			        		<i class="fi-home size-24"></i>
+			        		<span> Home</span>
+			        	</a>
+			        </li> 
+
+			        <li>
+			        	<a href="portfolio.html">
+			        		<i class="fi-photo size-24"></i>
+			        		<span> Portfolio</span>
+			        	</a>
+			        	<ul class="menu">
+			        		<li>
+			        			<a href="food.html">Food</a>
+			        		</li>
+			        		<li>
+			        			<a href="nature.html">Nature</a>
+			        		</li>
+			        		<li>
+			        			<a href="people.html">People</a>
+			        		</li>
+						</ul>
+					</li>
+
+			        <li>
+			        	<a href="client.html">
+			        		<i class="fi-heart size-24"></i>
+			        		<span> Client</span>
+			        	</a>
+			        </li>
+
+			        <li>
+			        	<a href="about.html">
+			        		<i class="fi-info size-24"></i>
+			        		<span> About</span>
+			        	</a>
+			        </li>
+
+			        <li>
+			        	<a href="contact.html">
+			        		<i class="fi-telephone size-24"></i>
+			        		<span> Contact</span>
+			        	</a>
+			        </li>
+			    </ul>
+	    	</div>
+	  </div>
+	</div>
+
+	<div class="grid-x">
+  		<div class="cell">
+  			<h1 class="text-center">PORTFOLIO:- NATURE</h1>
+  		</div>
+  	</div>
+
+  	<div class="grid-container">
+  		<div class="callout secondary" data-closable="slide-out-right">
+  			<p>Gardens, landscapes, flowers, waterfalls, and trees surround us; nature is a magnificent thing. Whether it is a flower bed in your back yard, or an overgrown waterfall in a local creek, or the landscape view at the highest vantage point of the highway, the beauty of nature is unmistakable. For many, one way to enjoy nature is through photography or videography with either a digital camera, nature camera, or even a security camera. Nature photography is a very fulfilling and exciting hobby; it can seem overwhelming at first for an amateur who possibly does not understand the equipment, or is unaware about how to catch the true essence of the flowers or trees, but with a few solid guidelines any beginning can become a seasoned pro in no time!</p>
+  			<button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+		    	<span aria-hidden="true">&times;</span>
+		  	</button>
+		</div>
+  	</div>
+
+	<div class="grid-container">
+		<div class="grid-x">
+			<div class="cell small-12 medium-3 large-12">
+				<div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
+			  		<div class="orbit-wrapper">
+			    		<div class="orbit-controls">
+			      			<button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
+			      			<button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
+			    		</div>
+			    		<ul class="orbit-container">
+			      			<li class="is-active orbit-slide">
+			        			<figure class="orbit-figure">
+			          				<img class="orbit-image" src="image/nature/nature2.jpg" alt="Space">
+			          				<figcaption class="orbit-caption">Nature is the art of god.</figcaption>
+			        			</figure>
+			      			</li>
+			      			<li class="orbit-slide">
+			        			<figure class="orbit-figure">
+			        				<img class="orbit-image" src="image/nature/nature3.jpg" alt="Space">
+			        				<figcaption class="orbit-caption">Some see a weed, some see a wish.</figcaption>
+			        			</figure>
+			      			</li>
+			      			<li class="orbit-slide">
+			      				<figure class="orbit-figure">
+			      					<img class="orbit-image" src="image/nature/nature4.jpg" alt="Space">
+			      					<figcaption class="orbit-caption">Adopt the pace of nature, her secret is patience.</figcaption>
+			        			</figure>
+			      			</li>
+			      			<li class="orbit-slide">
+			        			<figure class="orbit-figure">
+			          				<img class="orbit-image" src="image/nature/nature5.jpg" alt="Space">
+			          				<figcaption class="orbit-caption">The earth has music for those who listen.</figcaption>
+			        			</figure>
+			      			</li>
+			      			<li class="orbit-slide">
+			        			<figure class="orbit-figure">
+			          				<img class="orbit-image" src="image/nature/nature6.jpg" alt="Space">
+			          				<figcaption class="orbit-caption">Find beauty in small things.</figcaption>
+			        			</figure>
+			      			</li>
+			      			<li class="orbit-slide">
+			        			<figure class="orbit-figure">
+			          				<img class="orbit-image" src="image/nature/nature7.jpg" alt="Space">
+			          				<figcaption class="orbit-caption">The poetry of earth is never dead.</figcaption>
+			        			</figure>
+			      			</li>
+			      			<li class="orbit-slide">
+			        			<figure class="orbit-figure">
+			          				<img class="orbit-image" src="image/nature/nature8.jpg" alt="Space">
+			          				<figcaption class="orbit-caption">Eat healthy, be healthy.</figcaption>
+			        			</figure>
+			      			</li>
+			    		</ul>
+			  		</div>
+			  		<nav class="orbit-bullets">
+			  			<button class="is-active" data-slide="0"><span class="show-for-sr">First slide details.</span><span class="show-for-sr">Current Slide</span></button>
+			  			<button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
+			    		<button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
+			    		<button data-slide="3"><span class="show-for-sr">Fourth slide details.</span></button>
+			    		<button data-slide="4"><span class="show-for-sr">Fifth slide details.</span></button>
+			    		<button data-slide="5"><span class="show-for-sr">Sixth slide details.</span></button>
+			    		<button data-slide="6"><span class="show-for-sr">Seventh slide details.</span></button>
+			  		</nav>
+				</div>
+			</div>
+		</div>
+
+		<div class="grid-x grid-margin-x grid-margin-y">
+			<div class="cell small=3 medium-2 large-4">
+				<a href="image/nature/10.jpg">
+					<img src="image/nature/10.jpg" alt="nature">
+				</a>
+			</div>
+			<div class="cell small=3 medium-3 large-4">
+				<a href="image/nature/nature2.jpg">
+					<img src="image/nature/nature2.jpg" alt="nature">
+				</a>
+			</div>
+			<div class="cell small=3 medium-3 large-4">
+				<a href="image/nature/nature3.jpg">
+					<img src="image/nature/nature3.jpg" alt="nature">
+				</a>
+			</div>
+			<div class="cell small=3 medium-3 large-4">
+				<a href="image/nature/nature4.jpg">
+					<img src="image/nature/nature4.jpg" alt="nature">
+				</a>
+			</div>
+			<div class="cell small=3 medium-3 large-4">
+				<a href="image/nature/nature5.jpg">
+					<img src="image/nature/nature5.jpg" alt="nature">
+				</a>
+			</div>
+			<div class="cell small=3 medium-3 large-4">
+				<a href="image/nature/nature6.jpg">
+					<img src="image/nature/nature6.jpg" alt="nature">
+				</a>
+			</div>
+			<div class="cell small=3 medium-3 large-4">
+				<a href="image/nature/nature7.jpg">
+					<img src="image/nature/nature7.jpg" alt="nature">
+				</a>
+			</div>
+			<div class="cell small=3 medium-3 large-4">
+				<a href="image/nature/nature8.jpg">
+					<img src="image/nature/nature8.jpg" alt="nature">
+				</a>
+			</div>
+			<div class="cell small=3 medium-3 large-4">
+				<a href="image/nature/9.jpg">
+					<img src="image/nature/9.jpg" alt="nature">
+				</a>
+			</div>
+		</div>		
+	</div>
+
+
+	<!-- The social media icon bar -->
+	<div class="icon-bar">
+		<a href="https://www.facebook.com/" class="facebook" target="_blank">
+			<i class="fa fa-facebook"></i>
+		</a> 
+		<a href="https://twitter.com/login?lang=en" class="twitter" target="_blank">
+			<i class="fa fa-twitter"></i>
+		</a> 
+		<a href="https://www.google.com.np/" class="google" target="_blank">
+			<i class="fa fa-google"></i>
+		</a> 
+		<a href="https://np.linkedin.com/" class="linkedin" target="_blank">
+			<i class="fa fa-linkedin"></i>
+		</a>
+		<a href="https://www.youtube.com/" class="youtube" target="_blank">
+			<i class="fa fa-youtube"></i>
+		</a> 
+	</div>
+
+	<div class="callout secondary small" style="margin-top: 30px; margin-bottom: 30px;">
+	  	<p class="text-center">~~~ On to 
+	  		<a href="people.html">People Highlights</a> ~~~
+	  	</p>
+	</div>
+
+	<footer>
+		<h5>NS Photography</h5>
+		<p>Nepal Multi Photographer <br>
+			2511 | nikitashrestha@NS.com <br>
+			Kathmandu, Nepal <br>
+		&copy;nikitashrestha-photography </p>
+	</footer>
+	
+	<script src="js/vendor/jquery.js"></script>
+	<script src="js/vendor/what-input.js"></script>
+	<script src="js/vendor/foundation.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<title>Home</title>
+	<link href="css/foundation.css" rel="stylesheet" type="text/css" />
+	<link href="foundation-icons/foundation-icons.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="css/app.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+	h1
+	{
+		font-family: 'Titan One', cursive;
+		text-align: center;	
+	}
+
+	.logo
+	{
+		width: 50px;
+		height: 30px;
+		margin-right: 5px;
+	}
+
+	.para
+	{
+		background-color: black;
+	}
+	.para p
+	{
+		text-align: center;
+		color: white;
+		font-family: 'Anton', sans-serif;
+		font-size: 25px;
+		margin-top: 45px;
+	}
+
+	p
+	{
+		text-align: center;
+	}
+
+	.bord
+	{
+		border-style: solid;
+    	border-width: 5px;
+    	border-radius: 20px;
+	}
+
+	.bords
+	{
+		border-style: dotted;
+    	border-width: 5px;
+    	margin-top: 20px;
+	}
+
+	.cont 
+	{
+		position: relative;
+	  	width: 50%;
+	}
+
+	.image 
+	{
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+
+	.overlay 
+	{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 100%;
+		width: 100%;
+		opacity: 0;
+		transition: .5s ease;
+		background-color:	#4682B4;
+	}
+
+	.cont:hover .overlay 
+	{
+		opacity: 1;
+	}
+
+	.text 
+	{
+		color: white;
+		font-size: 20px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		text-align: center;
+	}
+
+	footer
+	{
+		width: 100%;
+		height: 50%;
+		background-color: #D3D3D3;
+		margin-top: 30px;
+		font-family: 'Gothic A1', sans-serif;
+	}
+
+	footer h5
+	{
+		text-align: center;
+	}
+	
+	footer p
+	{
+		text-align: center;
+	}
+	</style>
+</head>
+<body>
+	<!-- Sticky Menu -->
+	<div data-sticky-container>
+	  <div class="top-bar" data-sticky data-margin-top="0" id="example-menu">
+	    <div class="top-bar-left">
+	      <ul class="menu">
+	        <li class="menu-text"><img src="image/logo.png" class="logo">NS</li>
+	      </ul>
+	    </div>
+	    <div class="top-bar-right"> <!-- right assigned menu -->
+	      		<ul class="menu menu dropdown menu" data-dropdown-menu data-magellan>
+			      	<!-- linking menu and adding icons -->
+			        <li>
+			        	<a href="index.html">
+			        		<i class="fi-home size-24"></i>
+			        		<span> Home</span>
+			        	</a>
+			        </li> 
+
+			        <li>
+			        	<a href="portfolio.html">
+			        		<i class="fi-photo size-24"></i>
+			        		<span> Portfolio</span>
+			        	</a>
+			        	<ul class="menu">
+			        		<li>
+			        			<a href="food.html">Food</a>
+			        		</li>
+			        		<li>
+			        			<a href="nature.html">Nature</a>
+			        		</li>
+			        		<li>
+			        			<a href="people.html">People</a>
+			        		</li>
+						</ul>
+					</li>
+
+			        <li>
+			        	<a href="client.html">
+			        		<i class="fi-heart size-24"></i>
+			        		<span> Client</span>
+			        	</a>
+			        </li>
+
+			        <li>
+			        	<a href="about.html">
+			        		<i class="fi-info size-24"></i>
+			        		<span> About</span>
+			        	</a>
+			        </li>
+
+			        <li>
+			        	<a href="contact.html">
+			        		<i class="fi-telephone size-24"></i>
+			        		<span> Contact</span>
+			        	</a>
+			        </li>
+			    </ul>
+	    	</div>
+	  </div>
+	</div>
+	
+	<div class="grid-x">
+		<div class="cell small-6 medium-6 large-6" style="background-color: black;">
+			<div class="para">
+				<p>Hello!!</p>
+				<p>I am Nikita Shrestha</p>
+				<p>And I am a Photographer.</p>
+			</div>
+		</div>
+		<div class="cell small-8 medium-6 large-6">
+		  	<img src="image/bg1.jpg" alt="home">
+		</div>
+	</div>	
+
+	<div class="grid-container " style="margin-top: 10px;">
+		<div class="bord">
+			<h1>Portfolio</h1>
+			<div class="grid-x grid-margin-x grid-margin-y" style="padding-left: 10px; padding-right: 10px; padding-bottom: 10px;">
+			  	<div class="cell small-6 cont">
+			  		<a href="portfolio.html">
+			  			<img src="image/home/1.jpg" alt="home" class="image">
+			  			<div class="overlay">
+    						<div class="text">~Click here to go through the "PORTFOLIO"~</div>
+  						</div>
+			  		</a>
+			  	</div>
+
+			  	<div class="cell small-6 cont">
+			  		<a href="people.html">
+			  			<img src="image/home/2.jpg" alt="home" class="image">
+			  			<div class="overlay">
+    						<div class="text">~Click here to go through "PEOPLE PORTFOLIO"~</div>
+  						</div>
+			  		</a>
+			  	</div>
+			  	<div class="cell small-6 cont">
+			  		<a href="fashion.html">
+			  			<img src="image/home/3.jpg" alt="home" >
+			  			<div class="overlay">
+    						<div class="text">~Click here to go through "FASHION PORTFOLIO"~</div>
+  						</div>
+			  		</a>
+			  	</div>
+			  	<div class="cell small-6 cont">
+			  		<a href="nature.html">
+			  			<img src="image/home/4.jpg" alt="home">
+			  			<div class="overlay">
+    						<div class="text">~Click here to go through "NATURE PORTFOLIO"~</div>
+  						</div>
+			  		</a>
+			  	</div>
+			</div>
+		</div>
+	</div>
+
+	
+	<div class="bords">
+		<h1>About</h1>
+		<p>
+			Hello, I’m Nikita Shrestha and i’m a photographer.
+			I travel the world and take pictures for a living. You can find my work on different magazines and cataloges. If you would like to work together, please <a href="contact.html">contact me.</a>
+		</p>
+	</div>
+	
+	<footer>
+		<h5>NS Photography</h5>
+		<p>Nepal Multi Photographer <br>
+			2511 | nikitashrestha@NS.com <br>
+			Kathmandu, Nepal <br>
+		&copy;nikitashrestha-photography </p>
+	</footer>
+
+	<script src="js/vendor/jquery.js"></script>
+	<script src="js/vendor/what-input.js"></script>
+	<script src="js/vendor/foundation.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>

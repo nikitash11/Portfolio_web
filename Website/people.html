@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<title>People</title>
+	<link href="css/foundation.css" rel="stylesheet" type="text/css" />
+	<link href="foundation-icons/foundation-icons.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="css/app.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		* 
+		{
+		    box-sizing: border-box;
+		}
+
+		body 
+		{
+		    margin: 0;
+		    font-family: Arial;
+		}
+
+		h1
+		{
+			font-family: 'Abril Fatface', cursive;
+		}
+
+		.header 
+		{
+		    text-align: center;
+		    padding: 32px;
+		}
+
+		.row 
+		{
+		    display: -ms-flexbox; /* IE10 */
+		    display: flex;
+		    -ms-flex-wrap: wrap; /* IE10 */
+		    flex-wrap: wrap;
+		    padding: 0 4px;
+		}
+
+		/* Create four equal columns that sits next to each other */
+		.column 
+		{
+		    -ms-flex: 25%; /* IE10 */
+		    flex: 25%;
+		    max-width: 25%;
+		    padding: 0 4px;
+		}
+
+		.column img 
+		{
+		    margin-top: 8px;
+		    vertical-align: middle;
+		}
+
+		/* Responsive layout - makes a two column-layout instead of four columns */
+		@media screen and (max-width: 800px) 
+		{
+			.column 
+			{
+		        -ms-flex: 50%;
+		        flex: 50%;
+		        max-width: 50%;
+		    }
+		}
+
+		/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+		@media screen and (max-width: 600px) 
+		{
+			.column 
+			{
+				-ms-flex: 100%;
+        		flex: 100%;
+        		max-width: 100%;
+    		}
+		}
+
+		/* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
+		.icon-bar 
+		{
+		  	position: fixed;
+		  	top: 50%;
+		  	-webkit-transform: translateY(-50%);
+		  	-ms-transform: translateY(-50%);
+		  	transform: translateY(-50%);
+		}
+
+		/* Style the icon bar links */
+		.icon-bar a 
+		{
+			display: block;
+			text-align: center;
+			padding: 16px;
+			transition: all 0.3s ease;
+			color: white;
+			font-size: 20px;
+		}
+
+		/* Style the social media icons with color, if you want */
+		.icon-bar a:hover 
+		{
+		  	background-color: #000;
+		}
+
+		.facebook 
+		{
+		  	background: #3B5998;
+		  	color: white;
+		}
+
+		.twitter 
+		{
+		  	background: #55ACEE;
+		  	color: white;
+		}
+
+		.google 
+		{
+		    background: #dd4b39;
+		  	color: white;
+		}
+
+		.linkedin 
+		{
+		    background: #007bb5;
+			color: white;
+		}
+
+		.youtube 
+		{
+			background: #bb0000;
+		  	color: white;
+		}
+
+		.zoom 
+		{
+		    padding: 50px;
+		    transition: transform .2s; /* Animation */
+		    margin: 0 auto;
+		}
+
+		.zoom:hover 
+		{
+		    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+		}
+
+
+		footer
+		{
+			width: 100%;
+			height: 50%;
+			background-color: #D3D3D3;
+			font-family: 'Gothic A1', sans-serif;
+		}
+
+		footer h5
+		{
+			text-align: center;
+		}
+		footer p
+		{
+			text-align: center;
+		}
+
+		.logo
+		{
+			width: 50px;
+			height: 30px;
+			margin-right: 5px;
+		}
+	</style>
+</head>
+	<body>
+		<!-- Sticky Menu -->
+		<div data-sticky-container>
+		  <div class="top-bar" data-sticky data-margin-top="0" id="example-menu">
+		    <div class="top-bar-left">
+		      <ul class="menu">
+		        <li class="menu-text">
+		        	<img src="image/logo.png" class="logo">NS</li>
+		      </ul>
+		    </div>
+		    <div class="top-bar-right"> <!-- right assigned menu -->
+	      		<ul class="menu menu dropdown menu" data-dropdown-menu data-magellan>
+			      	<!-- linking menu and adding icons -->
+			        <li>
+			        	<a href="index.html">
+			        		<i class="fi-home size-24"></i>
+			        		<span> Home</span>
+			        	</a>
+			        </li> 
+
+			        <li>
+			        	<a href="portfolio.html">
+			        		<i class="fi-photo size-24"></i>
+			        		<span> Portfolio</span>
+			        	</a>
+			        	<ul class="menu">
+			        		<li>
+			        			<a href="food.html">Food</a>
+			        		</li>
+			        		<li>
+			        			<a href="nature.html">Nature</a>
+			        		</li>
+			        		<li>
+			        			<a href="people.html">People</a>
+			        		</li>
+						</ul>
+					</li>
+
+			        <li>
+			        	<a href="client.html">
+			        		<i class="fi-heart size-24"></i>
+			        		<span> Client</span>
+			        	</a>
+			        </li>
+
+			        <li>
+			        	<a href="about.html">
+			        		<i class="fi-info size-24"></i>
+			        		<span> About</span>
+			        	</a>
+			        </li>
+
+			        <li>
+			        	<a href="contact.html">
+			        		<i class="fi-telephone size-24"></i>
+			        		<span> Contact</span>
+			        	</a>
+			        </li>
+			    </ul>
+	    	</div>
+		  </div>
+		</div>
+
+		<!-- Title -->
+		<div class="grid-x">
+	  		<div class="cell">
+	  			<h1 class="text-center">PORTFOLIO:- PEOPLE</h1>
+	  		</div>
+	  	</div>
+
+		<div class="row"> 
+	  		<div class="column">
+	  			<div class="zoom">
+		  			<a href="image/people/people2.jpg">
+		  				<img src="image/people/people2.jpg" alt="people">
+		  			</a>
+		  		</div>
+		  		<div class="zoom">
+				    <a href="image/people/people3.jpg">
+				    	<img src="image/people/people3.jpg" alt="people">
+				    </a>
+				</div>
+				<div class="zoom">
+				    <a href="image/people/people4.jpg">
+				    	<img src="image/people/people4.jpg" alt="people">
+				    </a>
+				</div>
+				<div class="zoom">
+				    <a href="image/people/people5.jpg">
+				    	<img src="image/people/people5.jpg" alt="people">
+				    </a>
+				</div>
+	  		</div>
+	  		<div class="column">
+	  			<div class="zoom">
+		  			<a href="image/people/people7.jpg">
+		  				<img src="image/people/people7.jpg" alt="people">
+		  			</a>
+	  			</div>
+	  			<div class="zoom">
+				    <a href="image/people/8.jpg">
+				    	<img src="image/people/8.jpg" alt="people">
+				    </a>
+			    </div>
+			    <div class="zoom">
+		    		<a href="image/people/9.jpg">
+		    			<img src="image/people/9.jpg" alt="people">
+		    		</a>
+	    		</div>
+	    		<div class="zoom">
+				    <a href="image/people/people10.jpg">
+				    	<img src="image/people/people10.jpg" alt="people">
+				    </a>
+			    </div>
+			    <div class="zoom">
+				    <a href="image/people/people11.jpg">
+				    	<img src="image/people/people11.jpg" alt="people">
+				    </a>
+			    </div>
+			    <div class="zoom">
+				    <a href="image/people/21.jpg">
+				    	<img src="image/people/21.jpg" alt="people">
+				    </a>
+				</div>
+			</div>
+			<div class="column">
+				<div class="zoom">
+					<a href="image/people/people12.jpg">
+						<img src="image/people/people12.jpg" alt="people">
+					</a>
+				</div>
+				<div class="zoom">
+				    <a href="image/people/people13.jpg">
+				    	<img src="image/people/people13.jpg" alt="people">
+				    </a>
+				</div>
+				<div class="zoom">
+				    <a href="image/people/14.jpeg">
+				    	<img src="image/people/14.jpeg" alt="people">
+				    </a>
+				</div>
+				<div class="zoom">
+				    <a href="image/people/people15.jpg">
+				    	<img src="image/people/people15.jpg" alt="people">
+				    </a>
+				</div>
+				<div class="zoom">
+				    <a href="image/people/people16.jpg">
+				    	<img src="image/people/people16.jpg" alt="people">
+				    </a>
+				</div>
+			</div>
+	  		<div class="column">
+	  			<div class="zoom">
+		    		<a href="image/people/people17.jpg">
+		    			<img src="image/people/people17.jpg" alt="people">
+		    		</a>
+		    	</div>
+		    	<div class="zoom">
+				    <a href="image/people/people18.jpg">
+				    	<img src="image/people/people18.jpg" alt="people">
+				    </a>
+				</div>
+				<div class="zoom">
+				    <a href="image/people/19.jpg">
+				    	<img src="image/people/19.jpg" alt="people">
+				    </a>
+				</div>
+				<div class="zoom">
+				    <a href="image/people/20.jpg">
+				    	<img src="image/people/20.jpg" alt="people">
+				    </a>
+				</div>
+				<div class="zoom">
+				    <a href="image/people/people1.jpg" >
+				    	<img src="image/people/people1.jpg" alt="people">
+				    </a>
+				</div>	
+	  		</div>
+		</div>
+
+		<!-- The social media icon bar -->
+		<div class="icon-bar">
+		<a href="https://www.facebook.com/" class="facebook" target="_blank">
+			<i class="fa fa-facebook"></i>
+		</a> 
+		<a href="https://twitter.com/login?lang=en" class="twitter" target="_blank">
+			<i class="fa fa-twitter"></i>
+		</a> 
+		<a href="https://www.google.com.np/" class="google" target="_blank">
+			<i class="fa fa-google"></i>
+		</a> 
+		<a href="https://np.linkedin.com/" class="linkedin" target="_blank">
+			<i class="fa fa-linkedin"></i>
+		</a>
+		<a href="https://www.youtube.com/" class="youtube" target="_blank">
+			<i class="fa fa-youtube"></i>
+		</a> 
+	</div>
+
+	<footer>
+		<h5>NS Photography</h5>
+		<p>Nepal Multi Photographer <br>
+			2511 | nikitashrestha@NS.com <br>
+			Kathmandu, Nepal <br>
+		&copy;nikitashrestha-photography </p>
+	</footer>
+
+		<script src="js/vendor/jquery.js"></script>
+		<script src="js/vendor/what-input.js"></script>
+		<script src="js/vendor/foundation.js"></script>
+		<script src="js/app.js"></script>
+</body>
+</html>
+
